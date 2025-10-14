@@ -1,0 +1,25 @@
+# Only run hooks on files inside lab01/homework/
+# This avoids processing files outside the current assignment folder
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.0
+    hooks:
+      - id: ruff-check
+        args: [ --fix ]
+        files: ^lab01/homework/
+      - id: ruff-format
+        files: ^lab01/homework/
+
+  - repo: https://github.com/rubik/xenon
+    rev: v0.9.0
+    hooks:
+      - id: xenon
+        args: [ '--max-absolute=B', '--max-modules=B', '--max-average=A' ]
+        files: ^lab01/homework/
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.18.2'
+    hooks:
+      - id: mypy
+        files: ^lab01/homework/
