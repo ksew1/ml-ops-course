@@ -9,6 +9,8 @@ dependencies = [
     "fastapi>=0.119.0",
     "joblib>=1.5.2",
     "pydantic>=2.12.2",
+    "scikit-learn>=1.7.2",
+    "sentence-transformers>=5.1.1",
     "torch>=2.8.0",
     "transformers>=4.57.1",
 ]
